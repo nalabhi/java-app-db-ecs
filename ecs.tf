@@ -17,7 +17,7 @@ data "template_file" "testapp" {
 resource "aws_ecs_task_definition" "test-def" {
   family                   = "testapp-task"
   execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
-  network_mode             = "default"       
+  network_mode             = "awsvpc"       
   requires_compatibilities = ["EC2"]
   cpu                      = var.EC2_cpu
   memory                   = var.EC2_memory
