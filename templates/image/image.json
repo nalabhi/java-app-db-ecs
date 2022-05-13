@@ -2,8 +2,8 @@
   {
     "name": "testapp",
     "image": "${app_image}",
-    "cpu": ${fargate_cpu},
-    "memory": ${fargate_memory},
+    "cpu": ${EC2_cpu},
+    "memory": ${EC2_memory},
     "networkMode": "awsvpc",
     "logConfiguration": {
         "logDriver": "awslogs",
